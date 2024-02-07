@@ -56,7 +56,7 @@
       }
     ],
     "imageResize": true,
-    "uniqCompNum": 5,
+    "uniqCompNum": 7,
     "versionPublish": "5.7.12",
     "screenshot": "screenshot.png",
     "mcSmartCart": {
@@ -741,6 +741,66 @@
           "_global": false,
           "_once": false,
           "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-section-subtitle": {
+              "color": "#14142b",
+              "text-align": "left",
+              "margin": "auto",
+              "position": "relative",
+              "padding-left": "60px"
+            },
+            ".row": {
+              "align-items": "center",
+              "height": "100%"
+            },
+            ".wrapper": {
+              "margin": "auto"
+            },
+            ".text": {
+              "padding": "1.8em 2.55em",
+              "background-color": "@cardColor",
+              "border-left": "2px solid #b18161"
+            },
+            "@media (max-width: 1279px)": {
+              ".text": {
+                "padding": "1.8em 2em"
+              }
+            },
+            ".iconfont-wrapper > .mbr-iconfont": {
+              "display": "block",
+              "font-size": "25px",
+              "color": "@iconColor",
+              "margin-bottom": "11px"
+            },
+            "@media (max-width: 479px)": {
+              ".text": {
+                "padding": "1.5em 2em"
+              }
+            },
+            ".mbr-section-title, .iconfont-wrapper": {
+              "color": "#111213"
+            }
+          },
+          "_name": "article4",
+          "_sourceTheme": "jewelrym5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"article4\" group=\"Article\" mbr-class=\"{'mbr-fullscreen': fullScreen}\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <input type=\"range\" inline title=\"Width\" name=\"contentWidth\" min=\"5\" max=\"12\" value=\"6\" step=\"1\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Icon\" name=\"showIcon\" checked>\n        <input type=\"color\" title=\"Icon Color\" name=\"iconColor\" value=\"#b18161\" selected condition=\"showIcon\">\n        <input type=\"color\" title=\"Card\" name=\"cardColor\" value=\"#f2f5fb\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.2\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row\">\n            <div class=\"wrapper col-12 col-md-{{contentWidth}}\">\n                <div class=\"text\">\n                    <div class=\"iconfont-wrapper\" mbr-if=\"showIcon\">\n                        <span mbr-icon class=\"mbr-iconfont mobi-mbri-quote-left mobi-mbri\"></span>\n                    </div>\n                    <h3 class=\"mbr-section-title mbr-fonts-style\" data-app-selector=\".mbr-section-title, .iconfont-wrapper\" mbr-theme-style=\"display-7\">Gwarantujemy bezpieczeństwo i dużą przestrzeń w jednym plecaku ! Odblaskowe kocie uszka to świetna ochrona w każdych warunkach, a duża pojemność torby pomieści wszystko, to\n<div>czego potrzebujesz.</div><br><div>swoimszlakiem-sklep.pl</div></h3>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "u3yP4Q3x6Y",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "article4-6"
         },
         {
           "alias": false,
